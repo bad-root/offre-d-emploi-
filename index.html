@@ -599,122 +599,142 @@
 
   <script>
     // jobs data with realistic salaries
-    const jobs = [
+    let jobs = [
       { 
+        id: 1,
         title: 'Chauffeur de livraison — Canada', 
         desc: 'Poste accessible sans diplôme. Expérience de conduite requise.', 
         salary: '1 800 - 3 500 CAD/mois',
         badges: ['Sans diplôme', 'Logement', 'Permis B'] 
       },
       { 
+        id: 2,
         title: 'Agent d\'entretien — Allemagne', 
         desc: 'Entretien des bureaux et espaces commerciaux. Formation sur place.', 
         salary: '800 - 1 100 €/mois',
         badges: ['Formation', 'CDI', 'Allemand A1'] 
       },
       { 
+        id: 3,
         title: 'Serveur/Serveuse — France', 
         desc: 'Restauration traditionnelle et gastronomique. Expérience appréciée.', 
         salary: '900 - 2 400 €/mois + pourboires',
         badges: ['CDI', 'Langues', 'Expérience'] 
       },
       { 
+        id: 4,
         title: 'Ouvrier agricole — Australie', 
         desc: 'Récoltes saisonnières dans les fermes. Hébergement fourni.', 
         salary: '1 100 - 4 000 AUD/mois',
         badges: ['Saisonnier', 'Logement', 'Physique'] 
       },
       { 
+        id: 5,
         title: 'Aide-soignant — Suisse', 
         desc: 'Soins aux personnes âgées. Formation en interne et avantages sociaux.', 
         salary: '1 500 - 5 500 CHF/mois',
         badges: ['Formation', 'Avantages', 'Diplôme'] 
       },
       { 
+        id: 6,
         title: 'Technicien en maintenance — Suède', 
         desc: 'Maintenance industrielle. Expérience 2 ans minimum requise.', 
         salary: '3 200 - 4 000 €/mois',
         badges: ['Qualifié', 'CDI', 'Industrie'] 
       },
       { 
+        id: 7,
         title: 'Plombier — Norvège', 
         desc: 'Installation et réparation de systèmes sanitaires. Contrat renouvelable.', 
         salary: '2 500 - 5 800 NOK/heure',
         badges: ['Qualifié', 'Renouvelable', 'Certification'] 
       },
       { 
+        id: 8,
         title: 'Assistant administratif — Belgique', 
         desc: 'Gestion de dossiers et bureautique. Bilingue FR/NL souhaité.', 
         salary: '2 300 - 2 900 €/mois',
         badges: ['Bureautique', 'Bilingue', 'CDD'] 
       },
       { 
+        id: 9,
         title: 'Employé logistique — Pays-Bas', 
         desc: 'Préparation de commandes et gestion des stocks dans un entrepôt.', 
         salary: '2 100 - 2 600 €/mois',
         badges: ['Logistique', 'CDI', 'Physique'] 
       },
       { 
+        id: 10,
         title: 'Programmeur junior — Canada', 
         desc: 'Développement web et applications. Télétravail partiel possible.', 
         salary: '4 500 - 6 000 CAD/mois',
         badges: ['IT', 'Télétravail', 'Diplôme'] 
       },
       { 
+        id: 11,
         title: 'Conducteur d\'engins — Finlande', 
         desc: 'Conduite d\'engins de chantier. Expérience et permis requis.', 
         salary: '3 000 - 3 800 €/mois',
         badges: ['Machines', 'CDI', 'Permis'] 
       },
       { 
+        id: 12,
         title: 'Hôte/Hôtesse d\'accueil — France', 
         desc: 'Accueil de clientèle internationale dans un hôtel 4 étoiles.', 
         salary: '1 900 - 2 300 €/mois',
         badges: ['Accueil', 'Langues', 'Hôtellerie'] 
       },
       { 
+        id: 13,
         title: 'Agent de sécurité — Irlande', 
         desc: 'Surveillance et sécurité. Formation assurée, travail de nuit possible.', 
         salary: '2 400 - 3 000 €/mois',
         badges: ['Formation', 'Nuit', 'Certification'] 
       },
       { 
+        id: 14,
         title: 'Electricien industriel — Danemark', 
         desc: 'Installations électriques sur chantiers. Expérience européenne appréciée.', 
         salary: '3 500 - 4 500 €/mois',
         badges: ['Industriel', 'Europe', 'Qualifié'] 
       },
       { 
+        id: 15,
         title: 'Serveur en hôtel — Espagne', 
         desc: 'Service en restauration hôtelière. Ambiance multiculturelle.', 
         salary: '1 500 - 1 900 €/mois + pourboires',
         badges: ['Hôtellerie', 'Logement', 'Espagnol'] 
       },
       { 
+        id: 16,
         title: 'Coiffeur/Coiffeuse — Luxembourg', 
         desc: 'Poste en salon moderne. Expérience et portfolio souhaités.', 
         salary: '800 - 3 500 €/mois',
         badges: ['Beauté', 'Expérience', 'Créatif'] 
       },
       { 
+        id: 17,
         title: 'Chef cuisinier — États-Unis', 
         desc: 'Cuisine gastronomique. Visa sponsorisé, expérience exigée.', 
         salary: '4 000 - 5 500 $/mois',
         badges: ['Gastronomie', 'Visa', 'Expérience'] 
       },
       { 
+        id: 18,
         title: 'Employé de ferme — Nouvelle-Zélande', 
         desc: 'Travail agricole saisonnier. Logement et repas inclus.', 
         salary: '3 200 - 4 000 NZD/mois',
         badges: ['Saisonnier', 'Logement', 'Nature'] 
       },
       { 
+        id: 19,
         title: 'Manutentionnaire — Royaume-Uni', 
         desc: 'Chargement/déchargement de marchandises. Travail physique.', 
         salary: '1 800 - 2 300 £/mois',
         badges: ['Manutention', 'Sans diplôme', 'Physique'] 
       },
       { 
+        id: 20,
         title: 'Réceptionniste — Canada', 
         desc: 'Service client dans un hôtel. Anglais courant requis.', 
         salary: '2 600 - 3 200 CAD/mois',
@@ -722,60 +742,70 @@
       },
       // New jobs with realistic salaries
       { 
+        id: 21,
         title: 'Infirmier(ère) — Qatar', 
         desc: 'Soins hospitaliers dans un établissement moderne. Logement fourni.', 
         salary: '3 500 - 4 500 $/mois',
         badges: ['Santé', 'Logement', 'Diplôme'] 
       },
       { 
+        id: 22,
         title: 'Jardinier/Paysagiste — Suisse', 
         desc: 'Entretien d\'espaces verts et création paysagère.', 
         salary: '4 000 - 5 000 CHF/mois',
         badges: ['Extérieur', 'Créatif', 'CDI'] 
       },
       { 
+        id: 23,
         title: 'Cuisinier — Émirats Arabes Unis', 
         desc: 'Cuisine internationale dans un restaurant renommé.', 
         salary: '2 800 - 3 800 $/mois',
         badges: ['Cuisine', 'Logement', 'Expérience'] 
       },
       { 
+        id: 24,
         title: 'Assistant maternel — Canada', 
         desc: 'Garde d\'enfants à domicile. Expérience et recommandations requises.', 
         salary: '2 500 - 3 200 CAD/mois',
         badges: ['Enfants', 'Logement', 'Diplôme'] 
       },
       { 
+        id: 25,
         title: 'Ouvrier viticole — France', 
         desc: 'Travail dans un domaine viticole prestigieux. Saisonnier.', 
         salary: '500 - 2 400 €/mois',
         badges: ['Saisonnier', 'Viticulture', 'Logement'] 
       },
       { 
+        id: 26,
         title: 'Téléconseiller — Portugal', 
         desc: 'Service client en français. Télétravail possible.', 
         salary: '1 400 - 1 800 €/mois',
         badges: ['Service client', 'Français', 'Télétravail'] 
       },
       { 
+        id: 27,
         title: 'Maçon — Belgique', 
         desc: 'Construction et rénovation de bâtiments. Expérience nécessaire.', 
         salary: '7 400 - 1 000 €/mois',
         badges: ['BTP', 'Expérience', 'CDI'] 
       },
       { 
+        id: 28,
         title: 'Animateur touristique — Grèce', 
         desc: 'Animation dans un complexe hôtelier. Saisonnier.', 
         salary: '1 000 - 1 700 €/mois + logement',
         badges: ['Animation', 'Saisonnier', 'Langues'] 
       },
       { 
+        id: 29,
         title: 'Carreleur — Luxembourg', 
         desc: 'Pose de carrelage et revêtements de sol. Qualifié.', 
         salary: '900 - 2 000 €/mois',
         badges: ['BTP', 'Qualifié', 'CDI'] 
       },
       { 
+        id: 30,
         title: 'Vendeur/Vendeuse — Monaco', 
         desc: 'Vente de luxe dans une boutique prestigieuse.', 
         salary: '1 800 - 2 500 €/mois + commissions',
@@ -798,7 +828,7 @@
             ${job.badges ? job.badges.map(badge => `<span class="badge ${Math.random() > 0.7 ? 'badge-green' : Math.random() > 0.5 ? 'badge-orange' : ''}">${badge}</span>`).join('') : ''}
           </div>
           <div class="offer-buttons">
-            <button class="btn btn-apply" onclick="onApply('${job.title}')">
+            <button class="btn btn-apply" onclick="onApply(${job.id})">
               <i class="fas fa-paper-plane"></i> Postuler
             </button>
             <button class="btn btn-skip" onclick="skipJob(${index})">
@@ -826,19 +856,28 @@
       const jobTypes = ['Qualifié', 'Saisonnier', 'CDI', 'CDD', 'Télétravail'];
       
       const newJob = {
+        id: jobs.length + 1,
         title: 'Nouvelle offre — ' + countries[Math.floor(Math.random() * countries.length)],
         desc: 'Poste récemment ajouté, rejoignez cette opportunité à l\'international.',
         salary: (Math.floor(Math.random() * 3000) + 1500) + ' - ' + (Math.floor(Math.random() * 4000) + 2500) + ' €/mois',
         badges: ['Nouveau', 'International', jobTypes[Math.floor(Math.random() * jobTypes.length)]]
       };
+      
+      // Correction : Mettre à jour le tableau jobs et réafficher
       jobs[index] = newJob;
       displayJobs(jobs);
     }
 
     // --- Flow when clicking Postuler ---
     let pendingJobTitle = null;
-    function onApply(title) {
-      pendingJobTitle = title;
+    function onApply(jobId) {
+      const job = jobs.find(j => j.id === jobId);
+      if (!job) {
+        console.error("Offre d'emploi non trouvée");
+        return;
+      }
+      
+      pendingJobTitle = job.title;
       document.getElementById('fbMessageModal').style.display = 'flex';
     }
 
